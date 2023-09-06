@@ -11,6 +11,16 @@ module.exports = {
         clean: true,
         assetModuleFilename: '[name][ext]'
     },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, '/'),
+        },
+        compress: true,
+        port: 3000,
+        open: true,
+        hot: true,
+        historyApiFallback: true,
+    },
     module: {
         rules: [
             {

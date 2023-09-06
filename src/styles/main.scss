@@ -4,6 +4,14 @@
   padding: 0;
   border: 0;
 }
-body {
-  color: red;
+
+.container {
+  & .timezone {
+    border: solid 1px red;
+  }
 }
+
+// ="container">
+//       <h2 id="timezone" class="timezone"></h2>
+//       <h1 id="time" class="time"></h1>
+//       <h2 id="date" class="date"

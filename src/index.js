@@ -1,7 +1,16 @@
-import joke from "./generateJoke";
 import './styles/main.scss'
-import person from './assets/person.svg'
+import moment from "moment";
+moment.locale('es');
 
-const personImg = document.getElementById('person')
-personImg.src = person
-console.log(joke());
+document.getElementById('time').innerHTML = moment().format('LTS')
+
+setInterval(setTime, 1000);
+
+function setTime() {
+    document.getElementById('time').innerHTML = moment().format('LTS')
+    console.log(moment.tz("2014-06-01 12:00", "Europe/London").format('LTS'));
+
+}
+
+
+document.getElementById('date').innerHTML = moment().format('MMMM DD YYYY')
